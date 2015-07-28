@@ -1,35 +1,48 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'restart' ]
 2 info using npm@2.7.4
 3 info using node@v0.12.2
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart hello@0.0.0
-6 info start hello@0.0.0
-7 verbose unsafe-perm in lifecycle true
-8 info hello@0.0.0 Failed to exec start script
-9 verbose stack Error: hello@0.0.0 start: `node ./bin/www`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
-9 verbose stack     at EventEmitter.emit (events.js:110:17)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
-9 verbose stack     at ChildProcess.emit (events.js:110:17)
-9 verbose stack     at maybeClose (child_process.js:1015:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
-10 verbose pkgid hello@0.0.0
-11 verbose cwd /Users/ywj/nodeDemo/helloworld/hello
-12 error Darwin 14.4.0
-13 error argv "node" "/usr/local/bin/npm" "start"
-14 error node v0.12.2
-15 error npm  v2.7.4
-16 error code ELIFECYCLE
-17 error hello@0.0.0 start: `node ./bin/www`
-17 error Exit status 1
-18 error Failed at the hello@0.0.0 start script 'node ./bin/www'.
-18 error This is most likely a problem with the hello package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node ./bin/www
-18 error You can get their info via:
-18 error     npm owner ls hello
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 verbose run-script [ 'prerestart',
+4 verbose run-script   'prestop',
+4 verbose run-script   'stop',
+4 verbose run-script   'poststop',
+4 verbose run-script   'restart',
+4 verbose run-script   'prestart',
+4 verbose run-script   'start',
+4 verbose run-script   'poststart',
+4 verbose run-script   'postrestart' ]
+5 info prerestart hello@0.0.0
+6 info prestop hello@0.0.0
+7 info stop hello@0.0.0
+8 info poststop hello@0.0.0
+9 info restart hello@0.0.0
+10 info prestart hello@0.0.0
+11 info start hello@0.0.0
+12 verbose unsafe-perm in lifecycle true
+13 info hello@0.0.0 Failed to exec start script
+14 verbose stack Error: hello@0.0.0 start: `node ./bin/www`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+14 verbose stack     at EventEmitter.emit (events.js:110:17)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+14 verbose stack     at ChildProcess.emit (events.js:110:17)
+14 verbose stack     at maybeClose (child_process.js:1015:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+15 verbose pkgid hello@0.0.0
+16 verbose cwd /Users/ywj/nodeDemo/helloworld/hello
+17 error Darwin 14.4.0
+18 error argv "node" "/usr/local/bin/npm" "restart"
+19 error node v0.12.2
+20 error npm  v2.7.4
+21 error code ELIFECYCLE
+22 error hello@0.0.0 start: `node ./bin/www`
+22 error Exit status 1
+23 error Failed at the hello@0.0.0 start script 'node ./bin/www'.
+23 error This is most likely a problem with the hello package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node ./bin/www
+23 error You can get their info via:
+23 error     npm owner ls hello
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

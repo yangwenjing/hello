@@ -3,7 +3,6 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('form.jade' ,{title: 'hello', })
+  res.render('form')
 });
-
 module.exports = router;
