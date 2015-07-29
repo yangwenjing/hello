@@ -41,11 +41,40 @@ nav {
     background: lightgoldenrodyellow;
     padding: 0 10px;
 }
+h3 {
+    text-align: center;
+    color: #122b40;
+    text-shadow: 0 2px white, 3px 0 2px #337ab7;
+    line-height: 36px;
+    font-size: 24px;
+    vertical-align: top;
+}
+h3 span {
+    font-weight: bolder;
+    font-size: 36px;
+    padding: 0 10px;
+    color: #337ab7;
+}
 h4 {
     color: #337ab7;
+    position: relative;
+    padding-left: 5px;
 }
 h5 {
     border-left: 3px solid #337ab7;
     padding-left: 5px;
     margin-left:-10px;
+}
+h4:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid #337ab7;
+    border-radius: 5px;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+}
+.side h5 {
+    margin: 0;
 }

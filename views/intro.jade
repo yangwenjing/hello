@@ -1,8 +1,9 @@
 extends layout
 block content
-   h3 杨文静的简历
+   h3 <span>《</span>杨文静的简历<span>》</span>
    div(class="main")
       div(class="side")
          img(src="img/photo.png",class="img-thumbnail profile-img",alt="profile image")
+         include basInfo.jade
       article(class="intro")
          include introContent.jade

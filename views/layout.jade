@@ -8,22 +8,24 @@ html
     link(rel='stylesheet', href='/css/index.css')
   body
     nav
-      ul(class="nav nav-pills")
-        li(class="active")
+      ul(class="nav nav-pills nav-navbar-fixed-top")
+        li(class=(active=="home"?"active":""))
           a(href="/") 主页
-        li
+        li(class=(active=="users"?"active":""))
           a(href="/users") 简历
-        li(class="dropdown")
+        li(class=(active=="other"?"active dropdown":"dropdown"))
           a(href="#",role="button",data-target="#", aria-haspopup="true" ,aria-expanded="false",data-toggle="dropdown") 其他功能<span class="caret"></span>
-          ul(class="dropdown-menu")
-            li item1
-            li item2
-            li item3
+          ul(class="dropdown-menu ")
+            li(class=(subActive=="form"?"active":""))
+              a(href="/other/form") 使用表单
+            li(class=(subActive=="ajax"?"active":""))
+              a(href="/other/ajax") 使用Ajax
+            li(class=(subActive=="other"?"active":""))
+              a(href="/other/#")
       h1(class="logo")
         a(href="/")= "HELLO"
     div(class="wrapper")
       block content
-
       block footer
       script(src="/js/jquery.js")
       script(src="/js/bootstrap.min.js")
