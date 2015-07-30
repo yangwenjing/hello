@@ -1,0 +1,21 @@
+//
+   Created by ywj on 15/7/30.
+
+extends basic
+
+block content
+   div.panel
+      form.form-group(method="post", action="/users/register")
+         div.panel-heading
+            h4.panel-title 注册
+         div.panel-body
+            label(name="forName", for="name") 姓名
+            input(name="username", type="text", class="form-control", required=true, value=user.name)
+
+            label(name="forEmail", for="email") 邮箱
+            input(name="email", type="text",class="form-control", required=true, value=user.email)
+
+            label(name="forPwd", for="password") 密码
+            input(name="password", type="password", class="form-control", required=true, value=user.password)
+            div(style="padding-top:20px;")
+               button(type="submit", class="btn btn-primary pull-right") 提交

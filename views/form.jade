@@ -1,11 +1,16 @@
 //
    Created by ywj on 15/7/22.
-extends layout
+extends basic
 
 block content
-   form(class='form-group form-inline')
-      label(for='username') 用户名:
-         input(class='form-control', placeholder='姓名' name='username',value=username?username:"" type='text')
+   form(method="POST",class="panel panel-default")
+      div(class="panel-heading")
+         h3.panel-title 登录
+      div(class="form-group panel-body")
+
+         label(for='username') 用户名:
+            input(class='form-control', placeholder='姓名' name='username',value=username?username:"" type='text')
+         button(type="submit").btn.btn-default Submit
 
 
 

@@ -1,0 +1,15 @@
+//
+   Created by ywj on 15/7/30.
+link(rel="stylesheet", href="./css/labels.css")
+div.panel.panel-default
+   div.panel-heading
+      h4.panel-title 我的标签
+
+   div.panel-body
+      div.form-group()
+         label(name="add-labels",for="names") <span>+<span>添加标签
+         input(name="names",class="form-control",placeholder="标签以,隔开")
+      div
+      -each label in labels
+         a(href="#").label.label-1=label.name
+

@@ -1,5 +1,5 @@
 //数据库接口库
-var util = require('util');
+ var util = require('util');
 var sqlite3 = require('sqlite3').verbose();
 
 var db = undefined;
@@ -15,6 +15,12 @@ exports.connect = function (callback) {
                 callback(null);
             }
         });
+};
+
+exports.disconnect = function (callback) {
+    db.close();
+    if(callback)
+        callback();
 };
 
 exports.add = function(table, obj, callback) {
@@ -128,10 +134,8 @@ exports.find = function(table, fields, where, callback) {
             if(callback)
                 callback(err);
         } else {
-            util.log(rows);
-
             if(callback) {
-                callback(err,row);
+                callback(err,rows);
             }
         }
     });

@@ -1,0 +1,21 @@
+.label {
+    margin: 5px;
+    color: #204d74;
+    font-weight: normal;
+    transition: font-size .3s, color .3s, text-shadow .3s, font-weight .3s, transform .3s;
+}
+.label:hover {
+    font-size: 100%;
+    color: #204d74!important;
+    text-shadow: 0 1px white, 1px 0 #204d74;
+    transform: rotateX(180deg);
+    transition: transform .3s, color .3s;
+}
+.label-1 {
+    border: 2px dashed orangered;
+    background: lightgoldenrodyellow;
+    background-clip: border-box;
+}
+.label:visited, .label:active {
+    color: #204d74;
+}
